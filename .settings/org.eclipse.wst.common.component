@@ -2,6 +2,7 @@
     <wb-module deploy-name="MyStore">
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/images"/>
         <property name="context-root" value="/MyStore"/>
         <property name="java-output-path" value="/MyStore/WebRoot/WEB-INF/classes"/>
         <property name="me-merge-utility-modules" value="true"/>
