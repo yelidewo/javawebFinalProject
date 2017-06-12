@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 指定国际化资源文件的baseName为messageResource -->
+	<constant name="struts.custom.i18n.resources" value="messageResource" />
+
+	<!-- 设置该应用使用的解码集 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+
+	<!-- 上传的全部图片的最大限制 -->
+	<constant name="struts.multipart.maxSize" value="10241024000000" />
+
+	<package name="init" extends="struts-default">
+		<action name="init" class="com.leonyip.mystore.struts.action.InitAction">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+
+	<package name="goods" extends="struts-default">
+		<action name="goods_*" class="com.leonyip.mystore.struts.action.GoodsAction"
+			method="{1}">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">
+					image/bmp,image/png,image/gif,image/jpeg,image/jpg
+				</param>
+				<param name="maximumSize">10240000</param>
+			</interceptor-ref>
+			<!-- 榛樿鐨勬嫤鎴櫒锛屽繀椤昏鍐? -->
+			<interceptor-ref name="defaultStack" />
+			<result name="detail">/detail.jsp</result>
+			<result name="search">/searchResult.jsp</result>
+			<result name="searchResult">/searchResult.jsp</result>
+			<result name="addGood">/addGoods.jsp</result>
+			<param name="pageSize">5</param>
+			<param name="pageNum">1</param>
+			<result name="searchAllGoods">/allGoods.jsp</result>
+			<!-- 闄愬埗鍥剧墖鐨勬牸寮忓拰鍥剧墖鐨勫ぇ灏? -->
+			<result name="upload">/goodsDetail.jsp</result>
+			<result name="input">/addGoods.jsp</result>
+			<result name="goodsdetail">/goodsDetail.jsp</result>
+			<result name="deleteGoods">/deleteGoods.jsp</result>
+			<result name="adminDeleteGoods">/deleteGoods.jsp</result>
+			<result name="searchResultGoods">/searchResult.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="order" extends="struts-default">
+		<action name="order_*" class="com.leonyip.mystore.struts.action.OrderAction"
+			method="{1}">
+			<result name="order">/order.jsp</result>
+			<result name="myorder">/myorder.jsp</result>
+			<result name="myorderitem">/myorderitem.jsp</result>
+			<result name="allOrder">/allOrder.jsp</result>
+			<result name="updateOrder">/updateOrder.jsp</result>
+		</action>
+	</package>
+
+	<package name="goodstype" extends="struts-default">
+		<action name="goodstype_*"
+			class="com.leonyip.mystore.struts.action.GoodsTypeAction" method="{1}">
+			<result name="searchResult">
+				/selectgoods_type.jsp
+			</result>
+			<result name="deleteGoodsType">/deleteGoodsType.jsp</result>
+		</action>
+	</package>
+
+	<package name="cart" extends="struts-default">
+		<action name="cart_*" class="com.leonyip.mystore.struts.action.CartAction"
+			method="{1}">
+			<result name="cart">/cart.jsp</result>
+		</action>
+	</package>
+	<package name="user" extends="struts-default">
+		<action name="user_*" class="com.leonyip.mystore.struts.action.UserAction"
+			method="{1}">
+			<result name="regist">/index.jsp</result>
+			<result name="login">/index.jsp</result>
+			<result name="manager_login" type="redirect">/adminindex.jsp</result>
+			<result name="regist_fail">/regist.jsp</result>
+			<result name="login_fail">/login.jsp</result>
+			<result name="search">/searchuser.jsp</result>
+			<result name="searchAllUser">/adminindex.jsp</result>
+			<result name="detail">/userdetail.jsp</result>
+			<result name="update">/updateuserdetail.jsp</result>
+			<result name="input">${target}</result>
+			<result name="updateNew">/adminindex.jsp</result>
+			<result name="delete">/adminindex.jsp</result>
+			<result name="updatePwd">/forgetpwd.jsp</result>
+			<result name="updatePwdNew">/login.jsp</result>
+			<result name="exit">/index.jsp</result>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.3//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="usernum">
+		<field-validator type="requiredstring">
+			<message>请输入手机号！</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">11</param>
+			<param name="minLength">11</param>
+			<message>手机号长度为11位！！</message>
+		</field-validator>
+	</field>
+	<field name="userName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>请输入用户名！</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<message>请输入密码！</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="maxLength">12</param>
+			<param name="minLength">6</param>
+			<message>密码长度必须是6-12位！</message>
+		</field-validator>
+	</field>
+</validators>

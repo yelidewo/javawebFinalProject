@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="init" location="167,65" size="294,162">
+    <action name="init" location="143,105" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="index.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="goods" location="164,266" size="352,335">
+    <action name="goods_*" location="196,78" size="150,251">
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+      <result name="cart">
+        <resourceEdge source="cart" routing="0" target="cart.jsp" />
+      </result>
+      <result name="search">
+        <resourceEdge source="search" routing="0" target="index.jsp" />
+      </result>
+      <result name="searchResult">
+        <resourceEdge source="searchResult" routing="0" target="searchResult.jsp" />
+      </result>
+      <result name="addGood">
+        <resourceEdge source="addGood" routing="0" target="addGoods.jsp" />
+      </result>
+      <result name="searchAllGoods">
+        <resourceEdge source="searchAllGoods" routing="0" target="allGoods.jsp" />
+      </result>
+      <result name="upload">
+        <resourceEdge source="upload" routing="0" target="goodsDetail.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="addGoods.jsp" />
+      </result>
+      <result name="goodsdetail">
+        <resourceEdge source="goodsdetail" routing="0" target="goodsDetail.jsp" />
+      </result>
+      <result name="deleteGoods">
+        <resourceEdge source="deleteGoods" routing="0" target="deleteGoods.jsp" />
+      </result>
+      <result name="adminDeleteGoods">
+        <resourceEdge source="adminDeleteGoods" routing="0" target="deleteGoods.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="order" location="734,55" size="273,158">
+    <action name="order_*" location="114,108" size="150,41">
+      <result name="order">
+        <resourceEdge source="order" routing="0" target="order.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="goodstype" location="350,500" size="181,80">
+    <action name="goodstype_*" location="26,34" size="150,41">
+      <result name="searchResult">
+        <resourceEdge source="searchResult" routing="0" target="selectgoods_type.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="index.jsp" path="/index.jsp" location="500,50" size="150,55" />
+  <webResource name="detail.jsp" path="/detail.jsp" location="542,239" size="150,55" />
+  <webResource name="cart.jsp" path="/cart.jsp" location="50,200" size="150,55" />
+  <webResource name="searchResult.jsp" path="/searchResult.jsp" location="50,500" size="150,55" />
+  <webResource name="order.jsp" path="/order.jsp" location="50,350" size="150,55" />
+  <webResource name="selectgoods_type.jsp" path="/selectgoods_type.jsp" location="50,800" size="150,55" />
+  <webResource name="addGoods.jsp" path="/addGoods.jsp" location="50,650" size="150,55" />
+  <webResource name="allGoods.jsp" path="/allGoods.jsp" location="350,650" size="150,55" />
+  <webResource name="goodsDetail.jsp" path="/goodsDetail.jsp" location="350,800" size="150,55" />
+  <webResource name="deleteGoods.jsp" path="/deleteGoods.jsp" location="50,950" size="150,55" />
+  <package name="cart" location="338,902" size="181,82">
+    <action name="CartAction" location="100,44" size="150,40">
+      <result name="cart">
+        <resourceEdge source="cart" routing="0" target="cart.jsp" />
+      </result>
+    </action>
+  </package>
+</Struts2Diagram>
+
