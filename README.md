@@ -2,7 +2,8 @@
 ### 1 用户登录模块
 <pre>
 * 登录界面主要对用户的用户名和密码进行非空验证以及正确性进行验证，其界面如图所示。
-![image](https://github.com/maloneDing/javawebFinalProject/raw/master/images/01.jpg)
+![image](https://github.com/maloneDing/javawebFinalProject/master/images/01.jpg)
+![cmd-markdown-logo](https://www.zybuluo.com/static/img/logo.png)
 </pre>
 
 ### 2 用户注册模块
