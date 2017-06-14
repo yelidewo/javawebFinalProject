@@ -32,3 +32,5 @@
 * 购物车界面主要包括商品的图片、商品名称、商品单价、商品数量、商品总价、商品操作，其界面设计如图所示。
 [!image] https://github.com/maloneDing/javawebFinalProject/raw/master/images/07.jpg
 </pre>
+
+## ending
